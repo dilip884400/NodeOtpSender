@@ -41,14 +41,14 @@ Fitness Tracker Team`,
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res
-        .status(500)
+        .status(8080)
         .json({ error: "Failed to send email", details: error });
     }
     res.json({ message: "OTP sent successfully" });
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
